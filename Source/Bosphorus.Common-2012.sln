@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{F7479C64-01C8-4928-BD64-BC9B41E3E933}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Clr", "Projects\Bosphorus.Common.Clr\Bosphorus.Common.Clr.csproj", "{C4455788-2C4A-447F-AD77-1AB63D8B56C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{67F85A88-B038-495F-BC1D-2FD983998C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Clr.Demo", "Demos\Bosphorus.Common.Clr.Demo\Bosphorus.Common.Clr.Demo.csproj", "{760B19FA-1CB7-4A73-A52C-1126BCF99C05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4455788-2C4A-447F-AD77-1AB63D8B56C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4455788-2C4A-447F-AD77-1AB63D8B56C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4455788-2C4A-447F-AD77-1AB63D8B56C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4455788-2C4A-447F-AD77-1AB63D8B56C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4455788-2C4A-447F-AD77-1AB63D8B56C1} = {F7479C64-01C8-4928-BD64-BC9B41E3E933}
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05} = {67F85A88-B038-495F-BC1D-2FD983998C3D}
+	EndGlobalSection
+EndGlobal
