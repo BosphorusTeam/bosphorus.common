@@ -14,6 +14,7 @@ namespace Bosphorus.Common.Clr.Demo
                 Console.WriteLine("ok");
 
             IList<Action> customActionList = CustomAction.GetAll();
+            //Enumeration<CustomAction>.GetAll();
 
             IList<Action> actions = Action.GetAll();
             Action parsedAction1 = Action.Parse(1);
