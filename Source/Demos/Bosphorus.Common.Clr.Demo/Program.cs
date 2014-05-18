@@ -1,40 +1,44 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Bosphorus.Common.Clr.Enum;
+using Bosphorus.Common.Clr.Enum.Provider;
+using Bosphorus.Container.Castle.Facade;
 
 namespace Bosphorus.Common.Clr.Demo
 {
-    class Program
+    public class Program: IProgram
     {
-        static void Main(string[] args)
-        {
-            Action action = Action.New;
+        private readonly IEnumerationProvider<Action> enumerationProvider;
 
-            if (action == Action.New)
+        public Program(IEnumerationProvider<Action> enumerationProvider)
+        {
+            this.enumerationProvider = enumerationProvider;
+        }
+
+        public static void Main(string[] args)
+        {
+            WindowsRunner.Run<Program>(args);
+        }
+
+        public void Run(string[] args)
+        {
+            IList<Action> actions = enumerationProvider.GetAll();
+
+            Action action1 = enumerationProvider.Parse(1);
+            if (action1 == DefaultActions.New)
                 Console.WriteLine("ok");
 
-            IList<Action> customActionList = CustomAction.GetAll();
-            //Enumeration<CustomAction>.GetAll();
+            Action action2 = enumerationProvider.Parse("New");
+            if (action2 == DefaultActions.New)
+                Console.WriteLine("ok");
 
-            IList<Action> actions = Action.GetAll();
-            Action parsedAction1 = Action.Parse(1);
-            Action parsedAction2 = Action.Parse("New");
+            //IList<Enumeration<int>> list = Action.GetAll();
+            //Action parsedAction1 = (Action)Action.Parse(1);
+            //Action parsedAction2 = (Action)Action.Parse("New");
 
 
             Console.WriteLine("ok");
-
-            //Action[] enumerations = EnumerationExtensions.GetEnumerations(Action.New);
-            //foreach (var enumeration in enumerations)
-            //{
-            //    Console.WriteLine(enumeration);
-            //}
-
-            //Action action = EnumerationExtensions.FromValue(Action.New, 1);
-            //Console.WriteLine(action);
-
-            //Action parsedAction = null;
-            //EnumerationExtensions.TryParse(Action.New, 1, out parsedAction);
-            //Console.WriteLine(parsedAction);
         }
     }
 }

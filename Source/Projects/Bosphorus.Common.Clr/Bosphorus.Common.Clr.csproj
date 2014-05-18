@@ -30,6 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bosphorus.Container.Castle">
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.2\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,19 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enum.Provider\DefaultEnumerationProvider.cs" />
+    <Compile Include="Enum.Provider\EnumerationProviderExtensions.cs" />
+    <Compile Include="Enum.Provider\IEnumerationProvider.cs" />
+    <Compile Include="Enum\IEnumerationRegistration.cs" />
+    <Compile Include="Enum.Provider\Installer.cs" />
     <Compile Include="Exception\ExceptionBase.cs" />
     <Compile Include="Exception\ExceptionMessage.cs" />
-    <Compile Include="Enum\Enumeration.Utility.cs" />
     <Compile Include="Enum\Enumeration.Static.cs" />
-    <Compile Include="Enum\EnumerationNotExistsException.cs" />
-    <Compile Include="Headspring\Enumeration.cs" />
+    <Compile Include="Enum.Provider\EnumerationNotExistsException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\Enumeration.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Headspring\LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

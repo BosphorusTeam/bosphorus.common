@@ -1,6 +1,6 @@
 ﻿namespace Bosphorus.Common.Clr.Enum
 {
-    public partial class Enumeration<TEnumeration, TId>
+    public partial class Enumeration<TId>
     {
         public override bool Equals(object obj)
         {
@@ -12,12 +12,12 @@
             return Id.GetHashCode();
         }
 
-        public static bool operator ==(Enumeration<TEnumeration, TId> left, Enumeration<TEnumeration, TId> right)
+        public static bool operator ==(Enumeration<TId> left, Enumeration<TId> right)
         {
             return Equals(left, right);
         }
 
-        public static bool operator !=(Enumeration<TEnumeration, TId> left, Enumeration<TEnumeration, TId> right)
+        public static bool operator !=(Enumeration<TId> left, Enumeration<TId> right)
         {
             return !Equals(left, right);
         }

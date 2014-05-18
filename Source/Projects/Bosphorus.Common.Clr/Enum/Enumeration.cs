@@ -3,25 +3,27 @@ using System.Diagnostics;
 
 namespace Bosphorus.Common.Clr.Enum
 {
-    [Serializable]
-    [DebuggerDisplay("{Name} - {Id}")]
-    public abstract partial class Enumeration<TEnumeration, TId>
-        where TEnumeration : Enumeration<TEnumeration, TId>, new()
+    public abstract class EnumerationBase
     {
-        public virtual TId Id { get; set; }
         public virtual string Name { get; set; }
 
-        public override sealed string ToString()
+        public override string ToString()
         {
             return Name;
         }
 
+    }
+
+    [Serializable]
+    [DebuggerDisplay("{Name} - {Id}")]
+    public abstract partial class Enumeration<TId>: EnumerationBase
+    {
+        public virtual TId Id { get; set; }
    }
 
     [Serializable]
     [DebuggerDisplay("{Name} - {Id}")]
-    public abstract class Enumeration<TEnumeration> : Enumeration<TEnumeration, int>
-        where TEnumeration : Enumeration<TEnumeration>, new()
+    public abstract class Enumeration : Enumeration<int>
     {
     }
 }

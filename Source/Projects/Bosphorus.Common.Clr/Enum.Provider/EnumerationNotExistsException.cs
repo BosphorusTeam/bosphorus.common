@@ -1,7 +1,6 @@
-using System;
 using Bosphorus.Common.Clr.Exception;
 
-namespace Bosphorus.Common.Clr.Enum
+namespace Bosphorus.Common.Clr.Enum.Provider
 {
     public class EnumerationNotExistsException<TId> : ExceptionBase
     {
