@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using Bosphorus.Common.Clr.Enum;
 using Bosphorus.Common.Clr.Enum.Provider;
 using Bosphorus.Container.Castle.Facade;
 
@@ -18,7 +16,7 @@ namespace Bosphorus.Common.Clr.Demo
 
         public static void Main(string[] args)
         {
-            WindowsRunner.Run<Program>(args);
+            ConsoleRunner.Run<Program>(args);
         }
 
         public void Run(string[] args)
