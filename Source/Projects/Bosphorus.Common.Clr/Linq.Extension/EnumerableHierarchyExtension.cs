@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Bosphorus.Common.Clr.Linq.Hierarchy;
 
-namespace Bosphorus.Common.Clr.Linq.Hierarchy
+namespace Bosphorus.Common.Clr.Linq.Extension
 {
     // Stefan Cruysberghs, http://www.scip.be, March 2008
 
-    public static class LinqExtensionMethods
+    public static class EnumerableHierarchyExtension
     {
         private static IEnumerable<HierarchyNode<TEntity>> CreateHierarchy<TEntity, TProperty>(IEnumerable<TEntity> allItems, TEntity parentItem, Func<TEntity, TProperty> idProperty, Func<TEntity, TProperty> parentIdProperty, int depth)
             where TEntity : class

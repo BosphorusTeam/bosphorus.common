@@ -58,8 +58,9 @@
     <Compile Include="Exception\ExceptionMessage.cs" />
     <Compile Include="Enum\Enumeration.Static.cs" />
     <Compile Include="Enum.Provider\EnumerationNotExistsException.cs" />
-    <Compile Include="Linq.Hierarchy\HierarchyNode.cs" />
-    <Compile Include="Linq.Hierarchy\LinqExtensionMethods.cs" />
+    <Compile Include="Linq.Extension\QueryablePageExtension.cs" />
+    <Compile Include="Linq.Extension\HierarchyNode.cs" />
+    <Compile Include="Linq.Extension\EnumerableHierarchyExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
