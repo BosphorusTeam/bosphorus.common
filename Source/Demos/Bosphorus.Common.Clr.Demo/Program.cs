@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Bosphorus.BootStapper.Runner;
 using Bosphorus.Common.Clr.Enum.Provider;
-using Bosphorus.Container.Castle.Facade;
 
 namespace Bosphorus.Common.Clr.Demo
 {

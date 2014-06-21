@@ -32,9 +32,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bosphorus.BootStapper">
+      <HintPath>..\..\packages\Bosphorus.BootStapper.1.1.0.4\lib\net45\Bosphorus.BootStapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Common.Clr, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.10\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+      <HintPath>..\..\packages\Bosphorus.Common.Clr.1.0.0.5\lib\net45\Bosphorus.Common.Clr.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.11\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
       <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
@@ -60,12 +67,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Projects\Bosphorus.Common.Clr\Bosphorus.Common.Clr.csproj">
-      <Project>{C4455788-2C4A-447F-AD77-1AB63D8B56C1}</Project>
-      <Name>Bosphorus.Common.Clr</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
