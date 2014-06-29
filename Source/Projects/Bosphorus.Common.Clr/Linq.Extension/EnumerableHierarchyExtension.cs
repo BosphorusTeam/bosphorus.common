@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Bosphorus.Common.Clr.Linq.Hierarchy;
 
 namespace Bosphorus.Common.Clr.Linq.Extension
 {

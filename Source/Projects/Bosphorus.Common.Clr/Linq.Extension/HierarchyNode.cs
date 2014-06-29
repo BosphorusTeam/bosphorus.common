@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Bosphorus.Common.Clr.Linq.Hierarchy
+namespace Bosphorus.Common.Clr.Linq.Extension
 {
     /// <summary>
     /// Hierarchy node class which contains a nested collection of hierarchy nodes

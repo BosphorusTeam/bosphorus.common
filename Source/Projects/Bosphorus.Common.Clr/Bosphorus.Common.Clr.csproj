@@ -30,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.11, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.11\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.12\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
       <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,8 @@
     <Compile Include="Linq.Extension\HierarchyNode.cs" />
     <Compile Include="Linq.Extension\EnumerableHierarchyExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IO.TextWriter\CompositeTextWriter.cs" />
+    <Compile Include="IO.TextWriter\TextBoxWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\Enumeration.cs" />
