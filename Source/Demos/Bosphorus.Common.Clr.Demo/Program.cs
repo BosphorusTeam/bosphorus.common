@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Bosphorus.BootStapper.Runner;
+using System.Diagnostics;
+using Bosphorus.Common.Clr.Common;
+using Bosphorus.Common.Clr.Diagnostic.Trace;
 using Bosphorus.Common.Clr.Enum.Provider;
 
 namespace Bosphorus.Common.Clr.Demo
 {
-    public class Program: IProgram
+    public class Program
     {
         private readonly IEnumerationProvider<Action> enumerationProvider;
 
@@ -16,7 +18,12 @@ namespace Bosphorus.Common.Clr.Demo
 
         public static void Main(string[] args)
         {
-            ConsoleRunner.Run<Program>(args);
+            ITraceSourceBuilder traceSourceBuilder = new DefaultTraceSourceBuilder();
+            TraceSource traceSource = traceSourceBuilder.Build("Deneme");
+            traceSource.Info("Deneme", Method.Of("Main").Add("args", args));
+            traceSource.Warning("Deneme", Method.Of("Main").Add("args", args));
+            traceSource.Error("Deneme", Method.Of("Main").Add("args", args));
+
         }
 
         public void Run(string[] args)

@@ -17,52 +17,20 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-using System.Collections.Generic;
-using System.Text;
+using Bosphorus.Common.Clr.Common;
 
 namespace Bosphorus.Common.Clr.Exception
 {
-    public class ExceptionMessage
+    public class ExceptionMessage: Parameter<ExceptionMessage>
     {
-        private readonly StringBuilder messageBuilder;
-        private readonly IDictionary<string, object> parameters;
-
-        private ExceptionMessage(string message)
+        private ExceptionMessage(string initialMessage) 
+            : base(initialMessage)
         {
-            messageBuilder = new StringBuilder(message);
-            parameters = new Dictionary<string, object>();
         }
 
         public static ExceptionMessage Build(string message)
         {
             return new ExceptionMessage(message);
-        }
-
-        public ExceptionMessage Add(string key, object value)
-        {
-            parameters.Add(key, value);
-            return this;
-        }
-
-        public override string ToString()
-        {
-            string[] keys = new string[parameters.Count];
-            parameters.Keys.CopyTo(keys, 0);
-
-            for (int i = 0; i < keys.Length; i++)
-			{
-                if (i == 0)
-                    messageBuilder.Append(": [");
-
-                string key = keys[i];
-                object value = parameters[key];
-                string postString = (i != keys.Length - 1) ? ", " : "]";
-
-                messageBuilder.AppendFormat("{0}: {1}", key, value);
-                messageBuilder.Append(postString);
-			}
-
-            return messageBuilder.ToString();
         }
     }
 }

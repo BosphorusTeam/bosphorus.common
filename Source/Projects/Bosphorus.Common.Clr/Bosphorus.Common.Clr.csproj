@@ -30,16 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.12, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.12\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Core">
-      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Castle.Windsor">
-      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
@@ -50,11 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enum.Provider\DefaultEnumerationProvider.cs" />
+    <Compile Include="Common\Parameter.cs" />
+    <Compile Include="Diagnostic.Trace\Method.cs" />
+    <Compile Include="Diagnostic.Trace\DefaultTraceSourceBuilder.cs" />
+    <Compile Include="Diagnostic.Trace\ITraceSourceBuilder.cs" />
+    <Compile Include="Diagnostic.Trace\TraceSourceExtensions.cs" />
     <Compile Include="Enum.Provider\EnumerationProviderExtensions.cs" />
     <Compile Include="Enum.Provider\IEnumerationProvider.cs" />
     <Compile Include="Enum\IEnumerationRegistration.cs" />
-    <Compile Include="Enum.Provider\Installer.cs" />
     <Compile Include="Exception\ExceptionBase.cs" />
     <Compile Include="Exception\ExceptionMessage.cs" />
     <Compile Include="Enum\Enumeration.Static.cs" />
@@ -68,9 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\Enumeration.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,7 +5,7 @@ namespace Bosphorus.Common.Clr.Enum
 {
     public abstract class EnumerationBase
     {
-        public virtual string Name { get; set; }
+        public string Name { get; set; }
 
         public override string ToString()
         {
@@ -18,7 +18,7 @@ namespace Bosphorus.Common.Clr.Enum
     [DebuggerDisplay("{Name} - {Id}")]
     public abstract partial class Enumeration<TId>: EnumerationBase
     {
-        public virtual TId Id { get; set; }
+        public TId Id { get; set; }
    }
 
     [Serializable]

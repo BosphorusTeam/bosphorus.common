@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Castle.Core.Internal;
 
 namespace Bosphorus.Common.Clr.Enum.Provider
 {
