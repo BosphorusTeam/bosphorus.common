@@ -52,6 +52,7 @@
     <Compile Include="Exception\ExceptionMessage.cs" />
     <Compile Include="Enum\Enumeration.Static.cs" />
     <Compile Include="Enum.Provider\EnumerationNotExistsException.cs" />
+    <Compile Include="IO.TextWriter\RichTextBoxWriter.cs" />
     <Compile Include="Linq.Extension\QueryablePageExtension.cs" />
     <Compile Include="Linq.Extension\HierarchyNode.cs" />
     <Compile Include="Linq.Extension\EnumerableHierarchyExtension.cs" />
