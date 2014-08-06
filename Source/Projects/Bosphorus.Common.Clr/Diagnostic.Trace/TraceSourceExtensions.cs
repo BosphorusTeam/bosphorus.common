@@ -6,25 +6,27 @@ namespace Bosphorus.Common.Clr.Diagnostic.Trace
     {
         private static int id = 0;
 
-        public static void Info(this TraceSource traceSource, string message, Method method)
+        public static void Info(this TraceSource traceSource, string message, object data)
         {
-            Trace(traceSource, TraceEventType.Information, message, method);
+            TraceModel traceModel = new TraceModel(message, data);
+            Trace(traceSource, TraceEventType.Information, traceModel);
         }
 
-        public static void Warning(this TraceSource traceSource, string message, Method method)
+        public static void Warning(this TraceSource traceSource, string message, object data)
         {
-            Trace(traceSource, TraceEventType.Warning, message, method);
+            TraceModel traceModel = new TraceModel(message, data);
+            Trace(traceSource, TraceEventType.Warning, traceModel);
         }
 
-        public static void Error(this TraceSource traceSource, string message, Method method)
+        public static void Error(this TraceSource traceSource, string message, object data)
         {
-            Trace(traceSource, TraceEventType.Error, message, method);
+            TraceModel traceModel = new TraceModel(message, data);
+            Trace(traceSource, TraceEventType.Error, traceModel);
         }
 
-        private static void Trace(TraceSource traceSource, TraceEventType traceEventType, string message, Method method)
+        private static void Trace(TraceSource traceSource, TraceEventType traceEventType, TraceModel traceModel)
         {
-            string methodString = method.ToString();
-            traceSource.TraceData(traceEventType, id++, message, methodString);
+            traceSource.TraceData(traceEventType, id++, traceModel);
         }
     }
 }

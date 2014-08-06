@@ -44,6 +44,7 @@
     <Compile Include="Diagnostic.Trace\Method.cs" />
     <Compile Include="Diagnostic.Trace\DefaultTraceSourceBuilder.cs" />
     <Compile Include="Diagnostic.Trace\ITraceSourceBuilder.cs" />
+    <Compile Include="Diagnostic.Trace\TraceModel.cs" />
     <Compile Include="Diagnostic.Trace\TraceSourceExtensions.cs" />
     <Compile Include="Enum.Provider\EnumerationProviderExtensions.cs" />
     <Compile Include="Enum.Provider\IEnumerationProvider.cs" />

@@ -19,10 +19,15 @@ namespace Bosphorus.Common.Clr.Demo
         public static void Main(string[] args)
         {
             ITraceSourceBuilder traceSourceBuilder = new DefaultTraceSourceBuilder();
-            TraceSource traceSource = traceSourceBuilder.Build("Deneme");
-            traceSource.Info("Deneme", Method.Of("Main").Add("args", args));
-            traceSource.Warning("Deneme", Method.Of("Main").Add("args", args));
-            traceSource.Error("Deneme", Method.Of("Main").Add("args", args));
+            TraceSource traceSource = traceSourceBuilder.Build("Program");
+            traceSource.Listeners.Add(new EventLogTraceListener("ss"));
+
+            //traceSource.TraceData(TraceEventType.Critical, 1, new TraceModel(){Message = "MEssaGE", Data = Method.Of("dd")});
+            //traceSource.TraceData(TraceEventType.Critical, 1, );
+
+            traceSource.Info("Message", Method.Of("Main").Add("args", args));
+            traceSource.Warning("Message", new { Name = "Onur", Surname = "Eker" });
+            //traceSource.Error("Message", Method.Of("Main").Add("args", args));
 
         }
 
