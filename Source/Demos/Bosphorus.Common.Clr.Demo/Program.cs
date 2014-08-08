@@ -4,6 +4,7 @@ using System.Diagnostics;
 using Bosphorus.Common.Clr.Common;
 using Bosphorus.Common.Clr.Diagnostic.Trace;
 using Bosphorus.Common.Clr.Enum.Provider;
+using Bosphorus.Common.Clr.Extension;
 
 namespace Bosphorus.Common.Clr.Demo
 {
@@ -18,6 +19,13 @@ namespace Bosphorus.Common.Clr.Demo
 
         public static void Main(string[] args)
         {
+            string name = "Ounr EKER";
+            IEnumerable<string> parts = name.Split(2);
+            foreach (var part in parts)
+            {
+                Console.WriteLine(part);
+            }
+
             ITraceSourceBuilder traceSourceBuilder = new DefaultTraceSourceBuilder();
             TraceSource traceSource = traceSourceBuilder.Build("Program");
             traceSource.Listeners.Add(new EventLogTraceListener("ss"));
