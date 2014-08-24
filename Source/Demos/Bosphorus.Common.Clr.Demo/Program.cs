@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Bosphorus.Common.Clr.Common;
-using Bosphorus.Common.Clr.Diagnostic.Trace;
+using System.Runtime.InteropServices;
+using Bosphorus.Common.Clr.Diagnostic;
 using Bosphorus.Common.Clr.Enum.Provider;
-using Bosphorus.Common.Clr.Extension;
 
 namespace Bosphorus.Common.Clr.Demo
 {
     public class Program
     {
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        public static extern void OutputDebugString(string message);
+
         private readonly IEnumerationProvider<Action> enumerationProvider;
 
         public Program(IEnumerationProvider<Action> enumerationProvider)
@@ -19,23 +21,18 @@ namespace Bosphorus.Common.Clr.Demo
 
         public static void Main(string[] args)
         {
-            string name = "Ounr EKER";
-            IEnumerable<string> parts = name.Split(2);
-            foreach (var part in parts)
-            {
-                Console.WriteLine(part);
-            }
+            Debug.WriteLine("denene", "Critical");
 
-            ITraceSourceBuilder traceSourceBuilder = new DefaultTraceSourceBuilder();
-            TraceSource traceSource = traceSourceBuilder.Build("Program");
-            traceSource.Listeners.Add(new EventLogTraceListener("ss"));
+            OutputDebugString("ss");
+            DebugEx.Log("Sample Log\n{0}\n{1}", typeof (Program), typeof (Program));
 
-            //traceSource.TraceData(TraceEventType.Critical, 1, new TraceModel(){Message = "MEssaGE", Data = Method.Of("dd")});
-            //traceSource.TraceData(TraceEventType.Critical, 1, );
 
-            traceSource.Info("Message", Method.Of("Main").Add("args", args));
-            traceSource.Warning("Message", new { Name = "Onur", Surname = "Eker" });
-            //traceSource.Error("Message", Method.Of("Main").Add("args", args));
+            //string name = "Ounr EKER";
+            //IEnumerable<string> parts = name.Split(2);
+            //foreach (var part in parts)
+            //{
+            //    Console.WriteLine(part);
+            //}
 
         }
 

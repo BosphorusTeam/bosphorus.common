@@ -40,12 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ObjectDumper.cs" />
     <Compile Include="Common\Parameter.cs" />
-    <Compile Include="Diagnostic.Trace\Method.cs" />
-    <Compile Include="Diagnostic.Trace\DefaultTraceSourceBuilder.cs" />
-    <Compile Include="Diagnostic.Trace\ITraceSourceBuilder.cs" />
-    <Compile Include="Diagnostic.Trace\TraceModel.cs" />
-    <Compile Include="Diagnostic.Trace\TraceSourceExtensions.cs" />
+    <Compile Include="Diagnostic\DebugEx.cs" />
     <Compile Include="Enum.Provider\EnumerationProviderExtensions.cs" />
     <Compile Include="Enum.Provider\IEnumerationProvider.cs" />
     <Compile Include="Enum\IEnumerationRegistration.cs" />
@@ -65,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Enum\Enumeration.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
