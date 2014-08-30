@@ -27,6 +27,8 @@ namespace Bosphorus.Common.Clr.Demo
             DebugEx.Log("Sample Log\n{0}\n{1}", typeof (Program), typeof (Program));
 
 
+            Action verify = CustomActions.Verify;
+
             //string name = "Ounr EKER";
             //IEnumerable<string> parts = name.Split(2);
             //foreach (var part in parts)

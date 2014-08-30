@@ -43,6 +43,7 @@
     <Compile Include="Common\ObjectDumper.cs" />
     <Compile Include="Common\Parameter.cs" />
     <Compile Include="Diagnostic\DebugEx.cs" />
+    <Compile Include="Diagnostic\TraceSourceEx.cs" />
     <Compile Include="Enum.Provider\EnumerationProviderExtensions.cs" />
     <Compile Include="Enum.Provider\IEnumerationProvider.cs" />
     <Compile Include="Enum\IEnumerationRegistration.cs" />

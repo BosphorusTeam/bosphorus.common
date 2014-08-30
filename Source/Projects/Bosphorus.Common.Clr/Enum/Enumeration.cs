@@ -14,14 +14,12 @@ namespace Bosphorus.Common.Clr.Enum
 
     }
 
-    [Serializable]
     [DebuggerDisplay("{Name} - {Id}")]
     public abstract partial class Enumeration<TId>: EnumerationBase
     {
         public virtual TId Id { get; set; }
    }
 
-    [Serializable]
     [DebuggerDisplay("{Name} - {Id}")]
     public abstract class Enumeration : Enumeration<int>
     {
