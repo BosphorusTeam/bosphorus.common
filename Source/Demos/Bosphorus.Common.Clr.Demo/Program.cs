@@ -25,6 +25,8 @@ namespace Bosphorus.Common.Clr.Demo
 
             OutputDebugString("ss");
             DebugEx.Log("Sample Log\n{0}\n{1}", typeof (Program), typeof (Program));
+            TraceSourceEx traceSourceEx = new TraceSourceEx("Bosphorus.Common");
+            traceSourceEx.Information("Merhaba: {0}", "Dünya");
 
 
             Action verify = CustomActions.Verify;
