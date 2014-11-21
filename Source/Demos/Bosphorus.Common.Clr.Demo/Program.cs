@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Bosphorus.Common.Clr.Diagnostic;
 using Bosphorus.Common.Clr.Enum.Provider;
+using Bosphorus.Common.Clr.Symbol;
 
 namespace Bosphorus.Common.Clr.Demo
 {
@@ -21,6 +22,8 @@ namespace Bosphorus.Common.Clr.Demo
 
         public static void Main(string[] args)
         {
+            TestReflection();
+
             Debug.WriteLine("denene", "Critical");
 
             OutputDebugString("ss");
@@ -38,6 +41,13 @@ namespace Bosphorus.Common.Clr.Demo
             //    Console.WriteLine(part);
             //}
 
+        }
+
+        private static void TestReflection()
+        {
+            var methodInfo = Reflection<Program>.GetMethodInfo(x => x.Do(1));
+
+            Reflection<Program>.GetExplicitMethodInfo(methodInfo);
         }
 
         public void Run(string[] args)
@@ -58,6 +68,11 @@ namespace Bosphorus.Common.Clr.Demo
 
 
             Console.WriteLine("ok");
+        }
+
+        public int Do(int x)
+        {
+            return x;
         }
     }
 }

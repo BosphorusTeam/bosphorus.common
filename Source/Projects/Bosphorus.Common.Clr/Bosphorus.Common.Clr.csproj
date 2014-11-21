@@ -59,6 +59,7 @@
     <Compile Include="IO.TextWriter\CompositeTextWriter.cs" />
     <Compile Include="IO.TextWriter\TextBoxWriter.cs" />
     <Compile Include="Extension\StringExtensions.cs" />
+    <Compile Include="Symbol\Reflection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\Enumeration.cs" />
