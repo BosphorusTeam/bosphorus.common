@@ -55,6 +55,13 @@
     <Compile Include="Application\ApplicationContext.cs" />
     <Compile Include="Call\CallInvoker.cs" />
     <Compile Include="Call\ICallListener.cs" />
+    <Compile Include="CoC\Acceptance\DefaultCriteria.cs" />
+    <Compile Include="CoC\Acceptance\IAcceptance.cs" />
+    <Compile Include="CoC\Acceptance\ICriteria.cs" />
+    <Compile Include="CoC\Acceptance\OptimisticAcceptance.cs" />
+    <Compile Include="CoC\Convention\Extensions.cs" />
+    <Compile Include="CoC\Convention\IConvention.cs" />
+    <Compile Include="CoC\Convention\NullConvention.cs" />
     <Compile Include="Context\CallContext.cs" />
     <Compile Include="Context\GenericContextProvider.cs" />
     <Compile Include="Context\IContext.cs" />
@@ -70,6 +77,7 @@
       <Name>Bosphorus.Common.Clr</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
