@@ -1,7 +1,7 @@
 ﻿namespace Bosphorus.Common.Core.CoC.Acceptance
 {
-    public interface IAcceptance<in TInspectorContext>
+    public interface IAcceptance<in TAcceptanceContext>
     {
-        void Accept(ICriteria<TInspectorContext> criteria);
+        void Accept(ICriteria<TAcceptanceContext> criteria);
     }
 }

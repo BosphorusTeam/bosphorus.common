@@ -1,21 +1,20 @@
 ﻿using System.Collections.Generic;
 using Bosphorus.Common.Core.CoC.Acceptance;
-using Bosphorus.Common.Core.CoC.Convention;
 
-namespace Bosphorus.NExt.JsProxy.Core.TempConv
+namespace Bosphorus.Common.Core.CoC.Convention
 {
     public static class Extensions
     {
-        public static void ApplySafe<TInspectorContext>(this IConvention<TInspectorContext> extended, TInspectorContext context)
+        private static void ApplySafe<TConcentionContext>(this IConvention<TConcentionContext> extended, TConcentionContext context)
         {
-            IAcceptance<TInspectorContext> acceptance = extended as IAcceptance<TInspectorContext>;
+            IAcceptance<TConcentionContext> acceptance = extended as IAcceptance<TConcentionContext>;
             if (acceptance == null)
             {
                 extended.Apply(context);
                 return;
             }
 
-            ICriteria<TInspectorContext> criteria = new DefaultCriteria<TInspectorContext>(context);
+            DefaultCriteria<TConcentionContext> criteria = new DefaultCriteria<TConcentionContext>(context);
             acceptance.Accept(criteria);
             bool accepted = criteria.Result;
             if (!accepted)
@@ -26,9 +25,9 @@ namespace Bosphorus.NExt.JsProxy.Core.TempConv
             extended.Apply(context);
         }
 
-        public static void Apply<TInspectorContext>(this IList<IConvention<TInspectorContext>> extendedItems, TInspectorContext context)
+        public static void Apply<TConventionContext>(this IList<IConvention<TConventionContext>> extendedItems, TConventionContext context)
         {
-            foreach (IConvention<TInspectorContext> extended in extendedItems)
+            foreach (IConvention<TConventionContext> extended in extendedItems)
             {
                 extended.ApplySafe(context);
             }

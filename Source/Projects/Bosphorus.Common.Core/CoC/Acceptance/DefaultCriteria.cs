@@ -2,20 +2,21 @@
 
 namespace Bosphorus.Common.Core.CoC.Acceptance
 {
-    public class DefaultCriteria<TInspectorContext> : ICriteria<TInspectorContext>
+    public class DefaultCriteria<TCriteriaContext> : ICriteria<TCriteriaContext>
     {
-        public TInspectorContext Context { get; }
-        public bool Result { get; private set; }
+        private readonly TCriteriaContext context;
 
-        public DefaultCriteria(TInspectorContext context, bool result = true)
+        internal bool Result { get; private set; }
+
+        public DefaultCriteria(TCriteriaContext context, bool result = true)
         {
-            Context = context;
+            this.context = context;
             Result = result;
         }
 
-        public ICriteria<TInspectorContext> Expect(Func<TInspectorContext, bool> evaluation)
+        public ICriteria<TCriteriaContext> Expect(Func<TCriteriaContext, bool> expectation)
         {
-            bool currentResult = evaluation(Context);
+            bool currentResult = expectation(this.context);
             Result = Result & currentResult;
             return this;
         }

@@ -2,12 +2,9 @@
 
 namespace Bosphorus.Common.Core.CoC.Acceptance
 {
-    public interface ICriteria<out TInspectorContext>
+    public interface ICriteria<out TCriteriaContext>
     {
-        TInspectorContext Context { get; }
-
-        bool Result { get; }
-        ICriteria<TInspectorContext> Expect(Func<TInspectorContext, bool> evaluation);
+        ICriteria<TCriteriaContext> Expect(Func<TCriteriaContext, bool> expectation);
 
     }
 }

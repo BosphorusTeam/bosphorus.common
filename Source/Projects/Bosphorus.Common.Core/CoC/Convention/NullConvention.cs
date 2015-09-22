@@ -1,6 +1,4 @@
-using Bosphorus.Common.Core.CoC.Convention;
-
-namespace Bosphorus.NExt.JsProxy.Core.TempConv
+namespace Bosphorus.Common.Core.CoC.Convention
 {
     public class NullConvention<TConventionContext> : IConvention<TConventionContext>
     {

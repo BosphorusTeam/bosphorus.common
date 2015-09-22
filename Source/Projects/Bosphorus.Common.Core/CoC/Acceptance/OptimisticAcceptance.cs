@@ -1,8 +1,8 @@
 ﻿namespace Bosphorus.Common.Core.CoC.Acceptance
 {
-    class OptimisticAcceptance<TInspectorContext> : IAcceptance<TInspectorContext>
+    class OptimisticAcceptance<TAcceptanceContext> : IAcceptance<TAcceptanceContext>
     {
-        public void Accept(ICriteria<TInspectorContext> criteria)
+        public void Accept(ICriteria<TAcceptanceContext> criteria)
         {
             criteria.Expect(type => true);
         }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bosphorus.BootStapper.Kernel
+namespace Bosphorus.Common.Core.Application
 {
     public interface IApplicationListener
     {

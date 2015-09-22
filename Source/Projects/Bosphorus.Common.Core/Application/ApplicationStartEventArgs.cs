@@ -1,8 +1,6 @@
 using System;
-using Bosphorus.Common.Core.Application;
-using Environment = Bosphorus.Common.Core.Application.Environment;
 
-namespace Bosphorus.BootStapper.Kernel
+namespace Bosphorus.Common.Core.Application
 {
     public class ApplicationStartEventArgs: EventArgs
     {
