@@ -1,6 +1,6 @@
-﻿using Bosphorus.Common.Core.Context;
+﻿using Bosphorus.Common.Core.Application;
 
-namespace Bosphorus.Common.Core.Application
+namespace Bosphorus.Common.Core.Context.Application
 {
     public class ApplicationContext : IContext
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Bosphorus.Common.Core.Context
+namespace Bosphorus.Common.Core.Context.Call
 {
     public class CallContext : IContext
     {

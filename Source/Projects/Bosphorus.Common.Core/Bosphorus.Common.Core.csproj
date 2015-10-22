@@ -47,31 +47,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\ApplicationStartEventArgs.cs" />
     <Compile Include="Application\Environment.cs" />
     <Compile Include="Application\Host.cs" />
-    <Compile Include="Application\IApplicationListener.cs" />
+    <Compile Include="CoC\Installer.cs" />
+    <Compile Include="Context.Application\ApplicationContextProvider.cs" />
     <Compile Include="Application\Perspective.cs" />
-    <Compile Include="Application\ApplicationContext.cs" />
-    <Compile Include="Call\CallInvoker.cs" />
-    <Compile Include="Call\ICallListener.cs" />
-    <Compile Include="CoC\Acceptance\DefaultCriteria.cs" />
-    <Compile Include="CoC\Acceptance\IAcceptance.cs" />
-    <Compile Include="CoC\Acceptance\ICriteria.cs" />
-    <Compile Include="CoC\Acceptance\OptimisticAcceptance.cs" />
-    <Compile Include="CoC\Convention\Extensions.cs" />
-    <Compile Include="CoC\Convention\IConvention.cs" />
-    <Compile Include="CoC\Convention\NullConvention.cs" />
-    <Compile Include="Context\CallContext.cs" />
+    <Compile Include="Context.Application\ApplicationContext.cs" />
+    <Compile Include="Context.Call\CallContextProvider.cs" />
+    <Compile Include="CoC.Acceptance\DefaultCriteria.cs" />
+    <Compile Include="CoC.Acceptance\IAcceptance.cs" />
+    <Compile Include="CoC.Acceptance\ICriteria.cs" />
+    <Compile Include="CoC.Acceptance\OptimisticAcceptance.cs" />
+    <Compile Include="CoC.Convention\DefaultConventionApplier.cs" />
+    <Compile Include="CoC.Convention\Extensions.cs" />
+    <Compile Include="CoC.Convention\IConvention.cs" />
+    <Compile Include="CoC.Convention\IConventionApplier.cs" />
+    <Compile Include="CoC.Convention\NullConvention.cs" />
+    <Compile Include="Context.Call\CallContext.cs" />
+    <Compile Include="Context.Invocation\InvocationContext.cs" />
+    <Compile Include="Context.Invocation\InvocationContextProvider.cs" />
+    <Compile Include="Context\ContextEventArgs.cs" />
+    <Compile Include="Context\ContextInvoker.cs" />
     <Compile Include="Context\GenericContextProvider.cs" />
     <Compile Include="Context\IContext.cs" />
+    <Compile Include="Context\IContextListener.cs" />
     <Compile Include="Context\IContextProvider.cs" />
+    <Compile Include="Context\Installer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\bosphorus.container\Source\Projects\Bosphorus.Container.Castle\Bosphorus.Container.Castle.csproj">
+      <Project>{9B8DBFE7-A90C-40D6-B9C1-B6A9528F8317}</Project>
+      <Name>Bosphorus.Container.Castle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bosphorus.Common.Clr\Bosphorus.Common.Clr.csproj">
       <Project>{C4455788-2C4A-447F-AD77-1AB63D8B56C1}</Project>
       <Name>Bosphorus.Common.Clr</Name>
