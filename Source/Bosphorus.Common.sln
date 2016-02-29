@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{F7479C64-01C8-4928-BD64-BC9B41E3E933}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{67F85A88-B038-495F-BC1D-2FD983998C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Api", "Projects\Bosphorus.Common.Api\Bosphorus.Common.Api.csproj", "{6683BC19-B6C9-4686-B8FF-EE4A8596C724}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Application", "Projects\Bosphorus.Common.Application\Bosphorus.Common.Application.csproj", "{FDC84424-8B8C-421C-BB3C-9FF796073E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Api.Demo", "Demos\Bosphorus.Common.Api.Demo\Bosphorus.Common.Api.Demo.csproj", "{760B19FA-1CB7-4A73-A52C-1126BCF99C05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6683BC19-B6C9-4686-B8FF-EE4A8596C724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6683BC19-B6C9-4686-B8FF-EE4A8596C724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6683BC19-B6C9-4686-B8FF-EE4A8596C724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6683BC19-B6C9-4686-B8FF-EE4A8596C724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC84424-8B8C-421C-BB3C-9FF796073E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC84424-8B8C-421C-BB3C-9FF796073E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC84424-8B8C-421C-BB3C-9FF796073E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC84424-8B8C-421C-BB3C-9FF796073E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6683BC19-B6C9-4686-B8FF-EE4A8596C724} = {F7479C64-01C8-4928-BD64-BC9B41E3E933}
+		{FDC84424-8B8C-421C-BB3C-9FF796073E72} = {F7479C64-01C8-4928-BD64-BC9B41E3E933}
+		{760B19FA-1CB7-4A73-A52C-1126BCF99C05} = {67F85A88-B038-495F-BC1D-2FD983998C3D}
+	EndGlobalSection
+EndGlobal
