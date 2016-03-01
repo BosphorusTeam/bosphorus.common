@@ -23,9 +23,6 @@ namespace Bosphorus.Common.Application
                     .Start(),
 
                 Component
-                    .For<ApplicationContextProvider>(),
-
-                Component
                     .For<IContextProvider<CallContext>>()
                     .ImplementedBy<CallContextProvider>()
                     .LifeStyle
@@ -37,7 +34,10 @@ namespace Bosphorus.Common.Application
                     .ImplementedBy<InvocationContextProvider>()
                     .LifeStyle
                     .Singleton
-                    .Start()
+                    .Start(),
+
+                Component
+                    .For<ApplicationContextInvoker>()
             );
         }
     }
