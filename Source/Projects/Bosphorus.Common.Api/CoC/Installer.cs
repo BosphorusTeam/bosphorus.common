@@ -1,4 +1,5 @@
 ﻿using Bosphorus.Common.Api.CoC.Convention;
+using Bosphorus.Common.Api.Container;
 using Bosphorus.Common.Api.Symbol;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
@@ -6,7 +7,7 @@ using Castle.Windsor;
 
 namespace Bosphorus.Common.Api.CoC
 {
-    public class Installer: IWindsorInstaller
+    public class Installer: IBosphorusInstaller
     {
         private readonly ITypeProvider typeProvider;
 

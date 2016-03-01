@@ -57,6 +57,7 @@
     <Compile Include="CoC.Convention\IConvention.cs" />
     <Compile Include="CoC.Convention\IConventionApplier.cs" />
     <Compile Include="CoC\Installer.cs" />
+    <Compile Include="Container\IBosphorusInstaller.cs" />
     <Compile Include="Context\ContextEventArgs.cs" />
     <Compile Include="Context.Listener\DefaultContextInvoker.cs" />
     <Compile Include="Context.Provider\GenericContextProvider.cs" />

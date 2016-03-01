@@ -1,4 +1,5 @@
-﻿using Bosphorus.Common.Api.Context.Provider;
+﻿using Bosphorus.Common.Api.Container;
+using Bosphorus.Common.Api.Context.Provider;
 using Bosphorus.Common.Application.Scope.Application;
 using Bosphorus.Common.Application.Scope.Call;
 using Bosphorus.Common.Application.Scope.Invocation;
@@ -9,7 +10,7 @@ using Castle.Windsor;
 
 namespace Bosphorus.Common.Application
 {
-    public class Installer : IWindsorInstaller
+    public class Installer : IBosphorusInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
