@@ -13,6 +13,8 @@ namespace Bosphorus.Common.Api.Context.Listener
         public DefaultContextInvoker()
         {
             ContextStarted += delegate { };
+            ContextFailed += delegate { };
+            ContextSuccessful += delegate { };
             ContextFinished += delegate { };
         }
 
