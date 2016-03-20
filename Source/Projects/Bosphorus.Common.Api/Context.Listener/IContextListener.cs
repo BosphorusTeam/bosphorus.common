@@ -11,6 +11,8 @@ namespace Bosphorus.Common.Api.Context.Listener
         where TContext: IContext
     {
         event EventHandler<ContextEventArgs<TContext>> ContextStarted;
+        event EventHandler<ContextEventArgs<TContext>> ContextFailed;
+        event EventHandler<ContextEventArgs<TContext>> ContextSuccessful;
         event EventHandler<ContextEventArgs<TContext>> ContextFinished;
 
     }

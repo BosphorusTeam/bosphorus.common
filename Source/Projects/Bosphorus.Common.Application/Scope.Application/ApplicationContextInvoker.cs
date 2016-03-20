@@ -18,6 +18,16 @@ namespace Bosphorus.Common.Application.Scope.Application
             inner.InvokeStarted(applicationContext);
         }
 
+        public void InvokeFailed()
+        {
+            inner.InvokeFailed(applicationContext);
+        }
+
+        public void InvokeSuccessful()
+        {
+            inner.InvokeSuccessful(applicationContext);
+        }
+
         public void InvokeFinished()
         {
             inner.InvokeFinished(applicationContext);
