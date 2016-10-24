@@ -62,6 +62,7 @@
     <Compile Include="Context\ContextEventArgs.cs" />
     <Compile Include="Context.Listener\DefaultContextInvoker.cs" />
     <Compile Include="Context.Provider\GenericContextProvider.cs" />
+    <Compile Include="Context\ContextFailedEventArgs.cs" />
     <Compile Include="Context\IContext.cs" />
     <Compile Include="Context.Listener\IContextListener.cs" />
     <Compile Include="Context.Provider\IContextProvider.cs" />

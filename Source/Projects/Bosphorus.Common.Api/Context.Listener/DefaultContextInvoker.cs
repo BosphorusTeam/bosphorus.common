@@ -6,7 +6,7 @@ namespace Bosphorus.Common.Api.Context.Listener
         where TContext : IContext
     {
         public event EventHandler<ContextEventArgs<TContext>> ContextStarted;
-        public event EventHandler<ContextEventArgs<TContext>> ContextFailed;
+        public event EventHandler<ContextFailedEventArgs<TContext>> ContextFailed;
         public event EventHandler<ContextEventArgs<TContext>> ContextSuccessful;
         public event EventHandler<ContextEventArgs<TContext>> ContextFinished;
 
@@ -20,25 +20,25 @@ namespace Bosphorus.Common.Api.Context.Listener
 
         public void InvokeStarted(TContext context)
         {
-            ContextEventArgs<TContext> eventArgs = new ContextEventArgs<TContext>(context);
+            var eventArgs = new ContextEventArgs<TContext>(context);
             ContextStarted(this, eventArgs);
         }
 
-        public void InvokeFailed(TContext context)
+        public void InvokeFailed(TContext context, System.Exception exception)
         {
-            ContextEventArgs<TContext> eventArgs = new ContextEventArgs<TContext>(context);
+            var eventArgs = new ContextFailedEventArgs<TContext>(context, exception);
             ContextFailed(this, eventArgs);
         }
 
         public void InvokeSuccessful(TContext context)
         {
-            ContextEventArgs<TContext> eventArgs = new ContextEventArgs<TContext>(context);
+            var eventArgs = new ContextEventArgs<TContext>(context);
             ContextSuccessful(this, eventArgs);
         }
 
         public void InvokeFinished(TContext context)
         {
-            ContextEventArgs<TContext> eventArgs = new ContextEventArgs<TContext>(context);
+            var eventArgs = new ContextEventArgs<TContext>(context);
             ContextFinished(this, eventArgs);
         }
 

@@ -1,4 +1,5 @@
-﻿using Bosphorus.Common.Api.Context.Listener;
+﻿using System;
+using Bosphorus.Common.Api.Context.Listener;
 
 namespace Bosphorus.Common.Application.Scope.Application
 {
@@ -18,9 +19,9 @@ namespace Bosphorus.Common.Application.Scope.Application
             inner.InvokeStarted(applicationContext);
         }
 
-        public void InvokeFailed()
+        public void InvokeFailed(Exception exception)
         {
-            inner.InvokeFailed(applicationContext);
+            inner.InvokeFailed(applicationContext, exception);
         }
 
         public void InvokeSuccessful()
