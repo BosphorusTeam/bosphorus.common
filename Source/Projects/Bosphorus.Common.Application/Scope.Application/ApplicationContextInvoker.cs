@@ -19,9 +19,10 @@ namespace Bosphorus.Common.Application.Scope.Application
             inner.InvokeStarted(applicationContext);
         }
 
-        public void InvokeFailed(Exception exception)
+        public bool InvokeFailed(Exception exception)
         {
-            inner.InvokeFailed(applicationContext, exception);
+            var handled = inner.InvokeFailed(applicationContext, exception);
+            return handled;
         }
 
         public void InvokeSuccessful()

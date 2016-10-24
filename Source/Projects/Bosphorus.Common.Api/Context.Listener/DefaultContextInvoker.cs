@@ -24,10 +24,11 @@ namespace Bosphorus.Common.Api.Context.Listener
             ContextStarted(this, eventArgs);
         }
 
-        public void InvokeFailed(TContext context, System.Exception exception)
+        public bool InvokeFailed(TContext context, System.Exception exception)
         {
             var eventArgs = new ContextFailedEventArgs<TContext>(context, exception);
             ContextFailed(this, eventArgs);
+            return eventArgs.Handled;
         }
 
         public void InvokeSuccessful(TContext context)
