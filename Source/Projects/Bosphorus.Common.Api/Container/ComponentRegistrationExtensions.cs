@@ -1,7 +1,7 @@
 ﻿using System;
 using Castle.MicroKernel.Registration;
 
-namespace Castle.MicroKernel.Registration
+namespace Bosphorus.Common.Api.Container
 {
     public static class ComponentRegistrationExtensions
     {

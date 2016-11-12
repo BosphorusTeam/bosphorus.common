@@ -57,7 +57,15 @@
     <Compile Include="CoC.Convention\IConvention.cs" />
     <Compile Include="CoC.Convention\IConventionApplier.cs" />
     <Compile Include="CoC\Installer.cs" />
+    <Compile Include="Container\Coc\ComponentModelAcceptance.cs" />
+    <Compile Include="Container\Coc\ComponentModelConvention.cs" />
+    <Compile Include="Container\Coc\ComponentModelConventionApplier.cs" />
+    <Compile Include="Container\Coc\Installer.cs" />
+    <Compile Include="Container\Common\ResolveExtensionExtensions.cs" />
     <Compile Include="Container\ComponentRegistrationExtensions.cs" />
+    <Compile Include="Container\Extension.Decorator\Extensions.cs" />
+    <Compile Include="Container\Extension.Decorator\DecorationRegistration.cs" />
+    <Compile Include="Container\Extension.Decorator\DecoratorApplier.cs" />
     <Compile Include="Container\IBosphorusInstaller.cs" />
     <Compile Include="Context\ContextEventArgs.cs" />
     <Compile Include="Context.Listener\DefaultContextInvoker.cs" />
