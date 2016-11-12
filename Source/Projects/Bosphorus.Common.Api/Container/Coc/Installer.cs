@@ -13,8 +13,10 @@ namespace Bosphorus.Common.Api.Container.Coc
                     .For<ComponentModelConventionApplier>()
             );
 
+            /*
             var componentModelConstructionConvention = container.Resolve<ComponentModelConventionApplier>();
             container.Kernel.ComponentModelBuilder.AddContributor(componentModelConstructionConvention);
+            */
         }
     }
 }
