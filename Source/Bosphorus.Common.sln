@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{F7479C64-01C8-4928-BD64-BC9B41E3E933}"
 EndProject
@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{67F85A88
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Api", "Projects\Bosphorus.Common.Api\Bosphorus.Common.Api.csproj", "{6683BC19-B6C9-4686-B8FF-EE4A8596C724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Application", "Projects\Bosphorus.Common.Application\Bosphorus.Common.Application.csproj", "{FDC84424-8B8C-421C-BB3C-9FF796073E72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Runtime", "Projects\Bosphorus.Common.Application\Bosphorus.Common.Runtime.csproj", "{FDC84424-8B8C-421C-BB3C-9FF796073E72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.Common.Api.Demo", "Demos\Bosphorus.Common.Api.Demo\Bosphorus.Common.Api.Demo.csproj", "{760B19FA-1CB7-4A73-A52C-1126BCF99C05}"
 EndProject

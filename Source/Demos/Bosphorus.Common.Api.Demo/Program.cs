@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Bosphorus.Common.Api.Enum.Provider;
-using Bosphorus.Common.Api.Symbol;
+using Bosphorus.Common.Api.Reflectionn;
 
 namespace Bosphorus.Common.Api.Demo
 {

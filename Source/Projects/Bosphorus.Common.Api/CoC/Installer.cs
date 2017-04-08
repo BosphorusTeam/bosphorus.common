@@ -1,6 +1,6 @@
 ﻿using Bosphorus.Common.Api.CoC.Convention;
 using Bosphorus.Common.Api.Container;
-using Bosphorus.Common.Api.Symbol;
+using Bosphorus.Common.Api.Reflectionn;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
