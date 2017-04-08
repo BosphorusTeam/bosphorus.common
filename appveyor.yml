@@ -6,8 +6,8 @@ install:
 before_build:
     - cmd: cd Source
     - cmd: nuget restore
+    - ps: gitversion /l console /output buildserver /updateassemblyinfo /b (get-item env:APPVEYOR_REPO_BRANCH).Value
     - cmd: cd ..
-    - ps: gitversion /l console /output buildserver /updateassemblyinfo AssemblyInfo.cs /b (get-item env:APPVEYOR_REPO_BRANCH).Value
     
 build:
   verbosity: minimal
